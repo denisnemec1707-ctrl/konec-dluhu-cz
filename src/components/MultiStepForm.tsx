@@ -116,25 +116,27 @@ const MultiStepForm = ({ onClose, isOverlay = false }: Props) => {
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
     setIsSubmitting(true);
     try {
-      await fetch("https://hooks.zapier.com/hooks/catch/21999989/4yrvanh/", {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain" },
-        body: JSON.stringify({
-          datum_a_cas: new Date().toLocaleString("cs-CZ"),
-          meno: data.name,
-          telefon: data.phone,
-          ma_nehnutelnost: "Ano",
-          typ_nemovitosti: data.propertyType,
-          vyse_dluhu: formatCzk(data.debtAmount),
-          kraj: data.region,
-          mesto: data.city,
-          popis_situace: data.description,
-          zdroj: "konec-dluhu-multistep",
-        }),
-      });
+      // TODO: Add konec-dluhu.cz Zapier webhook URL here
+      // await fetch("https://hooks.zapier.com/hooks/catch/XXXXXXX/XXXXXXX/", {
+      //   method: "POST",
+      //   mode: "no-cors",
+      //   headers: { "Content-Type": "text/plain" },
+      //   body: JSON.stringify({
+      //     datum_a_cas: new Date().toLocaleString("cs-CZ"),
+      //     meno: data.name,
+      //     telefon: data.phone,
+      //     ma_nehnutelnost: "Ano",
+      //     typ_nemovitosti: data.propertyType,
+      //     vyse_dluhu: formatCzk(data.debtAmount),
+      //     kraj: data.region,
+      //     mesto: data.city,
+      //     popis_situace: data.description,
+      //     zdroj: "konec-dluhu-multistep",
+      //   }),
+      // });
       if (typeof window.gtag === "function") {
-        window.gtag("event", "conversion", { send_to: "AW-18153709721/V2VUCMOb9qocEJnBrtBD" });
+        // TODO: Add konec-dluhu.cz Google Ads conversion tag
+        // window.gtag("event", "conversion", { send_to: "AW-XXXXXXXXX/XXXXXXXXXXXX" });
         window.gtag("event", "form_submitted");
       }
       setSubmitted(true);
