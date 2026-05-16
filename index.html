@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="cs">
   <head>
-    <!-- Google Tag (gtag.js) - GA4 + Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E7WEX03MK"></script>
-    <script>
+    <!-- TODO: Replace with konec-dluhu.cz Google Analytics & Ads IDs when available -->
+    <!-- Google Tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+    <!-- <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      // GDPR consent mode – must be before config calls
       gtag('consent', 'default', {
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
@@ -16,9 +15,7 @@
         'analytics_storage': 'denied',
         'wait_for_update': 500
       });
-
-      // Restore consent for returning visitors who already accepted
-      const savedConsent = localStorage.getItem('nemocapital_cookie_consent');
+      const savedConsent = localStorage.getItem('konec_dluhu_cookie_consent');
       if (savedConsent === 'accepted') {
         gtag('consent', 'update', {
           'ad_storage': 'granted',
@@ -27,24 +24,20 @@
           'analytics_storage': 'granted'
         });
       }
+      gtag('config', 'G-XXXXXXXXXX', { 'send_page_view': true, 'cookie_flags': 'SameSite=None;Secure' });
+      gtag('config', 'AW-XXXXXXXXX');
+    </script> -->
 
-      gtag('config', 'G-7E7WEX03MK', {
-        'send_page_view': true,
-        'cookie_flags': 'SameSite=None;Secure'
-      });
-
-      gtag('config', 'AW-18153709721');
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary SEO -->
-    <title>NemoCapital – Půjčka na nemovitost | Bez registru, bez dokladování příjmů</title>
-    <meta name="description" content="Banka vám řekla ne? Vlastníte nemovitost? NemoCapital vám poskytne financování na základě hodnoty vaší nemovitosti. Bez registru, bez dokladování příjmů. Vyřízení do 48 hodin.">
-    <meta name="keywords" content="půjčka na nemovitost, nebankovní půjčka, oddlužení nemovitosti, půjčka bez registru, refinancování, exekuce nemovitost, zástavní právo">
-    <meta name="author" content="NemoCapital s.r.o.">
+    <title>Konec Dluhů – Oddlužení nemovitosti | Zastavíme dražbu, vyřešíme exekuci</title>
+    <meta name="description" content="Hrozí vám dražba nebo exekuce na nemovitosti? Pomůžeme vám ji zastavit a zbavit se dluhů. Bezplatné poradenství, diskrétně a bez prověřování příjmů. Vyřízení do 10 dní.">
+    <meta name="keywords" content="oddlužení nemovitosti, zastavení dražby, exekuce nemovitost, zástavní právo, hrozí mi dražba, refinancování dluhů, insolvence nemovitost, bezplatné poradenství dluhy">
+    <meta name="author" content="Konec Dluhů s.r.o.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://nemocapital.cz/">
+    <link rel="canonical" href="https://konec-dluhu.cz/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -52,27 +45,24 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="NemoCapital">
-    <meta property="og:url" content="https://nemocapital.cz/">
-    <meta property="og:title" content="NemoCapital – Půjčka na nemovitost">
-    <meta property="og:description" content="Banka vám řekla ne? Vlastníte nemovitost? Financování bez registru a bez dokladování příjmů. Vyřízení do 48 hodin.">
-    <meta property="og:image" content="https://nemocapital.cz/og-image.png">
+    <meta property="og:site_name" content="Konec Dluhů">
+    <meta property="og:url" content="https://konec-dluhu.cz/">
+    <meta property="og:title" content="Konec Dluhů – Zastavíme dražbu, vyřešíme exekuci">
+    <meta property="og:description" content="Hrozí vám dražba nebo exekuce na nemovitosti? Bezplatné poradenství a rychlé řešení. Diskrétně, bez prověřování příjmů.">
+    <meta property="og:image" content="https://konec-dluhu.cz/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="cs_CZ">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NemoCapital – Půjčka na nemovitost">
-    <meta name="twitter:description" content="Banka vám řekla ne? Vlastníte nemovitost? Financování bez registru. Vyřízení do 48 hodin.">
-    <meta name="twitter:image" content="https://nemocapital.cz/og-image.png">
+    <meta name="twitter:title" content="Konec Dluhů – Zastavíme dražbu, vyřešíme exekuci">
+    <meta name="twitter:description" content="Hrozí vám dražba nebo exekuce na nemovitosti? Bezplatné poradenství a rychlé řešení. Diskrétně.">
+    <meta name="twitter:image" content="https://konec-dluhu.cz/og-image.png">
 
     <!-- Geo / local SEO -->
     <meta name="geo.region" content="CZ">
     <meta name="geo.placename" content="Praha">
-
-    <!-- Contentsquare / Hotjar -->
-    <script src="https://t.contentsquare.net/uxa/fddba8b2fdd53.js" async></script>
   </head>
 
   <body>
