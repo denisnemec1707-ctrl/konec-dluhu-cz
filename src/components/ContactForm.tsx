@@ -77,7 +77,7 @@ const ContactForm = () => {
         headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({
           datum_a_cas: new Date().toLocaleString("cs-CZ"),
-          ma_nehnutelnost: ownsProperty === "yes" ? "Áno" : ownsProperty === "no" ? "Nie" : "Nevyplněno",
+          ma_nehnutelnost: ownsProperty === "yes" ? "Ano" : ownsProperty === "no" ? "Ne" : "Nevyplněno",
           meno: formData.name,
           telefon: formData.phone,
           mesto: formData.city,

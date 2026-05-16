@@ -124,7 +124,7 @@ const MultiStepForm = ({ onClose, isOverlay = false }: Props) => {
           datum_a_cas: new Date().toLocaleString("cs-CZ"),
           meno: data.name,
           telefon: data.phone,
-          ma_nehnutelnost: "Áno",
+          ma_nehnutelnost: "Ano",
           typ_nemovitosti: data.propertyType,
           vyse_dluhu: formatCzk(data.debtAmount),
           kraj: data.region,
