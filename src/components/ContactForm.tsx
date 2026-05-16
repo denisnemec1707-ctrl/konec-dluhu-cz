@@ -82,9 +82,9 @@ const ContactForm = () => {
           telefon: formData.phone,
           mesto: formData.city,
           typ_nemovitosti: formData.propertyType,
-          pozadovana_castka: formData.loanAmount,
+          vyse_dluhu: formData.loanAmount,
           zatizeni_nemovitosti: formData.encumbrance,
-          ucel_financovania: formData.purpose,
+          typ_zavazku: formData.purpose,
           urgentnost: formData.urgency,
           typ_vlastnictvi: formData.ownership,
           kraj: formData.region,
@@ -141,13 +141,13 @@ const ContactForm = () => {
 
           <Select value={formData.propertyType} onValueChange={set("propertyType")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Typ nemovitosti" /></SelectTrigger><SelectContent><SelectItem value="byt">Byt</SelectItem><SelectItem value="dum">Rodinný dům</SelectItem><SelectItem value="pozemek">Pozemek</SelectItem><SelectItem value="komercni">Komerční nemovitost</SelectItem><SelectItem value="jiny">Jiný typ</SelectItem></SelectContent></Select>
 
-          <Select value={formData.loanAmount} onValueChange={set("loanAmount")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Požadovaná částka" /></SelectTrigger><SelectContent><SelectItem value="100000-500000">100 000 – 500 000 Kč</SelectItem><SelectItem value="500000-1000000">500 000 – 1 000 000 Kč</SelectItem><SelectItem value="1000000-2000000">1 000 000 – 2 000 000 Kč</SelectItem><SelectItem value="2000000-5000000">2 000 000 – 5 000 000 Kč</SelectItem><SelectItem value="5000000+">Více než 5 000 000 Kč</SelectItem></SelectContent></Select>
+          <Select value={formData.loanAmount} onValueChange={set("loanAmount")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Výše mých dluhů / závazků" /></SelectTrigger><SelectContent><SelectItem value="do500000">Do 500 000 Kč</SelectItem><SelectItem value="500000-1000000">500 000 – 1 000 000 Kč</SelectItem><SelectItem value="1000000-2000000">1 000 000 – 2 000 000 Kč</SelectItem><SelectItem value="2000000-5000000">2 000 000 – 5 000 000 Kč</SelectItem><SelectItem value="5000000+">Více než 5 000 000 Kč</SelectItem></SelectContent></Select>
 
           <Select value={formData.encumbrance} onValueChange={set("encumbrance")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Je nemovitost zatížena závazkem?" /></SelectTrigger><SelectContent><SelectItem value="nezatizena">Není zatížena</SelectItem><SelectItem value="zalozni-pravo-banka">Zástavní právo banky (hypotéka)</SelectItem><SelectItem value="zalozni-pravo-jine">Zástavní právo jiného věřitele</SelectItem><SelectItem value="exekuce">Exekuce na nemovitosti</SelectItem><SelectItem value="insolvence">Insolvence / oddlužení</SelectItem><SelectItem value="nevim">Nevím / nejsem si jistý/á</SelectItem></SelectContent></Select>
 
-          <Select value={formData.purpose} onValueChange={set("purpose")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Účel financování" /></SelectTrigger><SelectContent><SelectItem value="oddluzeni">Oddlužení / splacení exekuce</SelectItem><SelectItem value="podnikani">Podnikání / provozní kapitál</SelectItem><SelectItem value="rekonstrukce">Rekonstrukce / investice do nemovitosti</SelectItem><SelectItem value="refinancovani">Refinancování stávajících půjček</SelectItem><SelectItem value="spotreba">Spotřeba / osobní potřeby</SelectItem><SelectItem value="jine">Jiné</SelectItem></SelectContent></Select>
+          <Select value={formData.purpose} onValueChange={set("purpose")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Co potřebujete řešit?" /></SelectTrigger><SelectContent><SelectItem value="exekuce">Exekuce na nemovitosti</SelectItem><SelectItem value="zalozni-pravo">Zástavní právo věřitele</SelectItem><SelectItem value="hrozba-drazby">Hrozba nebo nařízení dražby</SelectItem><SelectItem value="insolvence">Insolvence / oddlužení</SelectItem><SelectItem value="refinancovani">Refinancování více dluhů do jednoho</SelectItem><SelectItem value="jine">Jiné</SelectItem></SelectContent></Select>
 
-          <Select value={formData.urgency} onValueChange={set("urgency")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Jak rychle peníze potřebujete?" /></SelectTrigger><SelectContent><SelectItem value="ihned">Okamžitě (do 7 dní)</SelectItem><SelectItem value="mesic">Do měsíce</SelectItem><SelectItem value="zjistuji">Zatím zjišťuji možnosti</SelectItem></SelectContent></Select>
+          <Select value={formData.urgency} onValueChange={set("urgency")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Jak urgentní je vaše situace?" /></SelectTrigger><SelectContent><SelectItem value="ihned">Kritická — dražba nebo exekuce hrozí do 7 dní</SelectItem><SelectItem value="mesic">Naléhavá — řeším to do měsíce</SelectItem><SelectItem value="zjistuji">Zatím zjišťuji možnosti</SelectItem></SelectContent></Select>
 
           <Select value={formData.ownership} onValueChange={set("ownership")}><SelectTrigger className="bg-background border-border h-12"><SelectValue placeholder="Typ vlastnictví nemovitosti" /></SelectTrigger><SelectContent><SelectItem value="sole">100 % vlastník/ce</SelectItem><SelectItem value="co-owner">Spoluvlastník/ce</SelectItem><SelectItem value="inheritance">V dědickém řízení</SelectItem></SelectContent></Select>
 

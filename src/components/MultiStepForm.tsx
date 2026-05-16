@@ -28,7 +28,7 @@ const TOTAL_STEPS = 4;
 
 type FormData = {
   ownsProperty: "yes" | "no" | null;
-  loanAmount: number;
+  debtAmount: number;
   propertyType: string;
   region: string;
   city: string;
@@ -46,12 +46,6 @@ const formatCzk = (val: number) => {
   return `${Math.round(val / 1000)} tis. Kč`;
 };
 
-const estimatedMonthly = (amount: number) => {
-  const rate = 0.009;
-  const n = 120;
-  const p = amount * rate / (1 - Math.pow(1 + rate, -n));
-  return Math.round(p / 100) * 100;
-};
 
 interface Props {
   onClose?: () => void;
@@ -66,7 +60,7 @@ const MultiStepForm = ({ onClose, isOverlay = false }: Props) => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [data, setData] = useState<FormData>({
     ownsProperty: null,
-    loanAmount: 500_000,
+    debtAmount: 500_000,
     propertyType: "",
     region: "",
     city: "",
@@ -132,7 +126,7 @@ const MultiStepForm = ({ onClose, isOverlay = false }: Props) => {
           telefon: data.phone,
           ma_nehnutelnost: "Áno",
           typ_nemovitosti: data.propertyType,
-          pozadovana_castka: formatCzk(data.loanAmount),
+          vyse_dluhu: formatCzk(data.debtAmount),
           kraj: data.region,
           mesto: data.city,
           popis_situace: data.description,
@@ -217,10 +211,10 @@ const MultiStepForm = ({ onClose, isOverlay = false }: Props) => {
 
           {data.ownsProperty === "no" && (
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
-              <p className="font-semibold mb-1">Bohužel, tato služba není pro vás.</p>
+              <p className="font-semibold mb-1">Bohužel, bez nemovitosti vám nemůžeme pomoci.</p>
               <p className="text-amber-700 leading-relaxed text-xs">
-                Naše financování vyžaduje nemovitost jako zajištění.
-                Doporučujeme se obrátit na banku nebo mikropůjčkové společnosti.
+                Naše řešení vyžaduje vlastnictví nemovitosti.
+                Doporučujeme bezplatnou dluhovou poradnu nebo insolvečního správce.
               </p>
             </div>
           )}
@@ -228,22 +222,22 @@ const MultiStepForm = ({ onClose, isOverlay = false }: Props) => {
           {data.ownsProperty === "yes" && (
             <div>
               <label className="block text-sm font-semibold text-foreground mb-2">
-                Kolik potřebujete na vyřešení situace? <span className="text-destructive">*</span>
+                Výše vašich dluhů (odhadem) <span className="text-destructive">*</span>
               </label>
               <div className="text-3xl font-bold text-accent-gold mb-3 text-center">
-                {formatCzk(data.loanAmount)}
+                {formatCzk(data.debtAmount)}
               </div>
               <input
                 type="range"
                 min={100_000}
                 max={5_000_000}
                 step={50_000}
-                value={data.loanAmount}
-                onChange={e => setData(d => ({ ...d, loanAmount: Number(e.target.value) }))}
+                value={data.debtAmount}
+                onChange={e => setData(d => ({ ...d, debtAmount: Number(e.target.value) }))}
                 className="w-full h-2 bg-secondary rounded-full appearance-none cursor-pointer accent-accent-gold"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                <span>100 tis.</span><span>5 mil. Kč</span>
+                <span>100 tis. Kč</span><span>5 mil. Kč a více</span>
               </div>
             </div>
           )}
