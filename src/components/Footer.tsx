@@ -61,16 +61,6 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-background/10">
-        <p className="text-xs text-background/30 leading-relaxed">
-          Konec Dluhů s.r.o. je registrovaný nebankovní zprostředkovatel úvěrů pod dohledem České národní banky (ČNB).
-          Minimální doba splácení: 12 měsíců. Maximální doba splácení: 120 měsíců.
-          Maximální RPSN (roční procentní sazba nákladů): 19,9&nbsp;%.
-          Reprezentativní příklad: Půjčka ve výši 500&nbsp;000&nbsp;Kč, splatnost 60 měsíců, úroková sazba 8,9&nbsp;% p.a.,
-          RPSN 9,3&nbsp;%, měsíční splátka 10&nbsp;358&nbsp;Kč, celková splatná částka 621&nbsp;480&nbsp;Kč.
-          Poskytnutí úvěru je podmíněno posouzením vaší bonity. Nesplacení úvěru může mít závažné finanční důsledky.
-        </p>
-      </div>
     </footer>
   );
 };
