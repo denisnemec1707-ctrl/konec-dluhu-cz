@@ -6,7 +6,7 @@ declare global {
   interface Window { gtag?: (...args: unknown[]) => void; }
 }
 
-const COOKIE_KEY = "nemocapital_cookie_consent";
+const COOKIE_KEY = "konec_dluhu_cookie_consent";
 
 const CookieBanner = () => {
   const [visible, setVisible] = useState(false);
@@ -68,7 +68,7 @@ const CookieBanner = () => {
               <div className="mt-3 text-xs text-background/50 leading-relaxed space-y-1">
                 <p><span className="text-background/70 font-medium">Nezbytné cookies:</span> Zajišťují základní funkce webu (formulář, navigace). Nelze odmítnout.</p>
                 <p><span className="text-background/70 font-medium">Analytické cookies:</span> Pomáhají nám pochopit, jak návštěvníci web používají. Pouze se souhlasem.</p>
-                <p className="pt-1">Správce údajů: NemoCapital s.r.o., info@nemocapital.cz</p>
+                <p className="pt-1">Správce údajů: Konec Dluhů s.r.o., info@konec-dluhu.cz</p>
               </div>
             )}
           </div>

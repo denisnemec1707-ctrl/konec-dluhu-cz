@@ -61,8 +61,8 @@ const NotFound = () => {
 
         <p className="text-white/30 text-sm pt-4">
           Potřebujete pomoc?{" "}
-          <a href="mailto:info@nemocapital.cz" className="text-white/50 hover:text-white/80 transition-colors underline">
-            info@nemocapital.cz
+          <a href="mailto:info@konec-dluhu.cz" className="text-white/50 hover:text-white/80 transition-colors underline">
+            info@konec-dluhu.cz
           </a>
         </p>
       </div>
