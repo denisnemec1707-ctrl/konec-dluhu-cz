@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <!-- Google Tag (gtag.js) - GA4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E7WEX03MK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // GDPR consent mode – must be before config calls
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+
+      // Restore consent for returning visitors who already accepted
+      const savedConsent = localStorage.getItem('nemocapital_cookie_consent');
+      if (savedConsent === 'accepted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+
+      gtag('config', 'G-7E7WEX03MK', {
+        'send_page_view': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+
+      gtag('config', 'AW-18153709721');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>NemoCapital – Půjčka na nemovitost | Bez registru, bez dokladování příjmů</title>
+    <meta name="description" content="Banka vám řekla ne? Vlastníte nemovitost? NemoCapital vám poskytne financování na základě hodnoty vaší nemovitosti. Bez registru, bez dokladování příjmů. Vyřízení do 48 hodin.">
+    <meta name="keywords" content="půjčka na nemovitost, nebankovní půjčka, oddlužení nemovitosti, půjčka bez registru, refinancování, exekuce nemovitost, zástavní právo">
+    <meta name="author" content="NemoCapital s.r.o.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nemocapital.cz/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NemoCapital">
+    <meta property="og:url" content="https://nemocapital.cz/">
+    <meta property="og:title" content="NemoCapital – Půjčka na nemovitost">
+    <meta property="og:description" content="Banka vám řekla ne? Vlastníte nemovitost? Financování bez registru a bez dokladování příjmů. Vyřízení do 48 hodin.">
+    <meta property="og:image" content="https://nemocapital.cz/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="cs_CZ">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NemoCapital – Půjčka na nemovitost">
+    <meta name="twitter:description" content="Banka vám řekla ne? Vlastníte nemovitost? Financování bez registru. Vyřízení do 48 hodin.">
+    <meta name="twitter:image" content="https://nemocapital.cz/og-image.png">
+
+    <!-- Geo / local SEO -->
+    <meta name="geo.region" content="CZ">
+    <meta name="geo.placename" content="Praha">
+
+    <!-- Contentsquare / Hotjar -->
+    <script src="https://t.contentsquare.net/uxa/fddba8b2fdd53.js" async></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

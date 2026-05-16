@@ -1,0 +1,51 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f2a5e"/>
+      <stop offset="50%" stop-color="#1a4494"/>
+      <stop offset="100%" stop-color="#0d3b7a"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="80%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="10%" cy="90%" r="35%">
+      <stop offset="0%" stop-color="#93c5fd" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#93c5fd" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Logo icon — shield + key -->
+  <g transform="translate(100, 215) scale(4)">
+    <path d="M24 4L8 10V24C8 33 15.5 40.5 24 44C32.5 40.5 40 33 40 24V10L24 4Z" fill="#1a4494" opacity="0.3"/>
+    <path d="M24 4L8 10V24C8 33 15.5 40.5 24 44C32.5 40.5 40 33 40 24V10L24 4Z" stroke="#60a5fa" stroke-width="2" fill="none"/>
+    <circle cx="22" cy="20" r="6" stroke="#D4A12A" stroke-width="2.5" fill="none"/>
+    <line x1="26.2" y1="24.2" x2="33" y2="31" stroke="#D4A12A" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="30" y1="28.5" x2="32.8" y2="25.8" stroke="#D4A12A" stroke-width="2" stroke-linecap="round"/>
+    <line x1="31.5" y1="30.2" x2="34.3" y2="27.5" stroke="#D4A12A" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Logo text -->
+  <text x="360" y="275" font-family="system-ui, sans-serif" font-size="64" font-weight="300" fill="rgba(255,255,255,0.9)">Nemo</text>
+  <text x="530" y="275" font-family="system-ui, sans-serif" font-size="64" font-weight="700" fill="#60a5fa">Capital</text>
+
+  <!-- Divider -->
+  <rect x="100" y="300" width="180" height="3" rx="2" fill="#D4A12A"/>
+
+  <!-- Headline -->
+  <text x="100" y="375" font-family="system-ui, sans-serif" font-size="52" font-weight="700" fill="white">Půjčka na nemovitost</text>
+  <text x="100" y="440" font-family="system-ui, sans-serif" font-size="32" font-weight="400" fill="rgba(255,255,255,0.7)">Bez registru · Bez dokladování příjmů</text>
+  <text x="100" y="490" font-family="system-ui, sans-serif" font-size="32" font-weight="400" fill="rgba(255,255,255,0.7)">Vyřízení do 48 hodin</text>
+
+  <!-- CTA badge -->
+  <rect x="100" y="530" width="340" height="56" rx="28" fill="#D4A12A"/>
+  <text x="270" y="565" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="#1a1a2e" text-anchor="middle">Nezávazná konzultace zdarma</text>
+
+  <!-- Domain -->
+  <text x="1100" y="590" font-family="system-ui, sans-serif" font-size="24" fill="rgba(255,255,255,0.4)" text-anchor="end">nemocapital.cz</text>
+</svg>
