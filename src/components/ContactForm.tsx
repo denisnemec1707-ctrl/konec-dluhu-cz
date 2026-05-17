@@ -71,30 +71,29 @@ const ContactForm = () => {
     setIsSubmitting(true);
     gtag("event", "lead_form_submit_attempt", { form_name: FORM_NAME });
     try {
-      // TODO: Add konec-dluhu.cz Zapier webhook URL here
-      // await fetch("https://hooks.zapier.com/hooks/catch/XXXXXXX/XXXXXXX/", {
-      //   method: "POST",
-      //   mode: "no-cors",
-      //   headers: { "Content-Type": "text/plain" },
-      //   body: JSON.stringify({
-      //     datum_a_cas: new Date().toLocaleString("cs-CZ"),
-      //     ma_nehnutelnost: ownsProperty === "yes" ? "Ano" : ownsProperty === "no" ? "Ne" : "Nevyplněno",
-      //     meno: formData.name,
-      //     telefon: formData.phone,
-      //     mesto: formData.city,
-      //     typ_nemovitosti: formData.propertyType,
-      //     vyse_dluhu: formData.loanAmount,
-      //     zatizeni_nemovitosti: formData.encumbrance,
-      //     typ_zavazku: formData.purpose,
-      //     urgentnost: formData.urgency,
-      //     typ_vlastnictvi: formData.ownership,
-      //     kraj: formData.region,
-      //     preferovany_kontakt: formData.contactTime,
-      //     odh_hodnota_nemovitosti: formData.propertyValue,
-      //     popis_situace: formData.description,
-      //     zdroj: "konec-dluhu-spodny-formular",
-      //   }),
-      // });
+      await fetch('https://hooks.zapier.com/hooks/catch/21999989/4o3ynq1/', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({
+          timestamp: new Date().toISOString(),
+          meno: formData.name,
+          telefon: '+420' + formData.phone.replace(/\s/g, ''),
+          mesto: formData.city,
+          typ_nemovitosti: formData.propertyType,
+          vyse_dluhu: formData.loanAmount,
+          zatizeni_nemovitosti: formData.encumbrance,
+          ucel: formData.purpose,
+          urgentnost: formData.urgency,
+          typ_vlastnictvi: formData.ownership,
+          kraj: formData.region,
+          preferovany_kontakt: formData.contactTime,
+          odh_hodnota_nemovitosti: formData.propertyValue,
+          popis_situace: formData.description,
+          ma_nemovitost: ownsProperty === 'yes' ? 'Ano' : 'Ne',
+          zdroj: 'konec-dluhu.cz',
+        }),
+      });
       gtag("event", "lead_form_success", { form_name: FORM_NAME });
       // TODO: Add konec-dluhu.cz Google Ads conversion tag
       // gtag("event", "conversion", { send_to: "AW-XXXXXXXXX/XXXXXXXXXXXX", value: 1.0, currency: "CZK" });
