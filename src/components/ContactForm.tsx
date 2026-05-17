@@ -73,8 +73,7 @@ const ContactForm = () => {
     try {
       await fetch('https://hooks.zapier.com/hooks/catch/21999989/4o3ynq1/', {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           timestamp: new Date().toISOString(),
           meno: formData.name,
