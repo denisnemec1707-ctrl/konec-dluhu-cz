@@ -94,8 +94,7 @@ const ContactForm = () => {
         }),
       });
       gtag("event", "lead_form_success", { form_name: FORM_NAME });
-      // TODO: Add konec-dluhu.cz Google Ads conversion tag
-      // gtag("event", "conversion", { send_to: "AW-XXXXXXXXX/XXXXXXXXXXXX", value: 1.0, currency: "CZK" });
+      gtag("event", "conversion", { send_to: "AW-18170998455/xl6LCPP-g68cELfdzdhD", value: 1.0, currency: "EUR" });
       toast({ title: "Děkujeme za váš zájem", description: "Ozveme se vám do několika hodin." });
     } catch {
       toast({ title: "Něco se pokazilo", description: "Zkuste to prosím znovu nebo nás kontaktujte na info@konec-dluhu.cz", variant: "destructive" });

@@ -139,8 +139,7 @@ const MultiStepForm = ({ onClose, isOverlay = false }: Props) => {
         }),
       });
       if (typeof window.gtag === "function") {
-        // TODO: Add konec-dluhu.cz Google Ads conversion tag
-        // window.gtag("event", "conversion", { send_to: "AW-XXXXXXXXX/XXXXXXXXXXXX" });
+        window.gtag("event", "conversion", { send_to: "AW-18170998455/xl6LCPP-g68cELfdzdhD", value: 1.0, currency: "EUR" });
         window.gtag("event", "form_submitted");
       }
       setSubmitted(true);
